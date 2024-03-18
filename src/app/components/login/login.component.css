@@ -12,14 +12,15 @@ img {
 }
 
 .anh-bia .anh-vien {
-  width: 520px;
+  height: 1080px;
+  width: 707px in !important;
 }
 
 .vien-trong {
   position: absolute;
   z-index: 2;
   top: 50vh;
-  left: 40vw;
+  left: 30vw;
 }
 
 .vien-trong .row {
@@ -28,7 +29,8 @@ img {
   border-radius: 40px;
   border-color: #c4c5f1 !important;
   position: absolute;
-  width: 800px;
+  width: 1170px;
+  height: 606px;
   top: 50%; /* Đặt nội dung ở giữa phía trên của ảnh bìa */
   left: 50%; /* Đặt nội dung ở giữa phía trái của ảnh bìa */
   transform: translate(
@@ -37,12 +39,13 @@ img {
   ); /* Di chuyển nội dung lên trên và sang trái để nằm ở giữa */
 }
 .anh-y-te {
-  width: 364px;
-  margin: 20px;
+  width: 495px;
+  margin-top: 70px;
+  margin-left: 20px;
 }
 .anh-may-tinh {
-  width: 342px;
-  margin: 20px;
+  width: 542px;
+  margin-top: 20px;
 }
 .bo-vien {
   border-radius: 40px;
@@ -89,5 +92,69 @@ form {
   }
   .anh-may-tinh {
     display: none;
+  }
+}
+@media only screen and (max-width: 1915px) {
+  .anh-vien {
+    position: absolute;
+    right: 0;
+  }
+
+  .anh-bia .anh-vien {
+    width: 520px;
+  }
+
+  .vien-trong {
+    position: absolute;
+    z-index: 2;
+    top: 50vh;
+    left: 40vw;
+  }
+
+  .vien-trong .row {
+    background-color: white;
+    border: 1px solid;
+    border-radius: 40px;
+    border-color: #c4c5f1 !important;
+    position: absolute;
+    width: 800px;
+    top: 50%; /* Đặt nội dung ở giữa phía trên của ảnh bìa */
+    left: 50%; /* Đặt nội dung ở giữa phía trái của ảnh bìa */
+    transform: translate(
+      -50%,
+      -50%
+    ); /* Di chuyển nội dung lên trên và sang trái để nằm ở giữa */
+  }
+  .anh-y-te {
+    width: 364px;
+    margin: 20px;
+  }
+  .anh-may-tinh {
+    width: 342px;
+    margin: 20px;
+  }
+  .bo-vien {
+    border-radius: 40px;
+  }
+  form {
+    padding: 20px;
+    margin: 20px;
+  }
+  .the {
+    padding-left: 20px;
+    color: #dc3545;
+    text-decoration: none;
+  }
+  .the2 {
+    color: #dc3545;
+    font-weight: bold;
+    padding-bottom: 20px;
+  }
+  .message {
+    height: 10px;
+    margin-top: 5px;
+    color: red;
+    display: block;
+    position: relative;
   }
 }
