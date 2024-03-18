@@ -3,21 +3,34 @@ img {
 }
 
 .anh-bia-container {
-  position: relative;
+  /* position: relative; */
+  /* height: fit-content; */
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: unset;
+  overflow: hidden;
 }
 
 .anh-vien {
-  position: absolute;
+  position: fixed;
   right: 0;
+  top: 0;
 }
 
 .anh-bia .anh-vien {
   height: 1080px;
-  width: 707px in !important;
+  width: 707px;
 }
 
 .vien-trong {
-  position: absolute;
+  /* position: absolute; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
   z-index: 2;
   top: 50vh;
   left: 30vw;
@@ -28,15 +41,9 @@ img {
   border: 1px solid;
   border-radius: 40px;
   border-color: #c4c5f1 !important;
-  position: absolute;
+  /* position: absolute; */
   width: 1170px;
   height: 606px;
-  top: 50%; /* Đặt nội dung ở giữa phía trên của ảnh bìa */
-  left: 50%; /* Đặt nội dung ở giữa phía trái của ảnh bìa */
-  transform: translate(
-    -50%,
-    -50%
-  ); /* Di chuyển nội dung lên trên và sang trái để nằm ở giữa */
 }
 .anh-y-te {
   width: 495px;
@@ -95,9 +102,22 @@ form {
   }
 }
 @media only screen and (max-width: 1915px) {
+  .anh-bia-container {
+    /* position: relative; */
+    /* height: fit-content; */
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: unset;
+    overflow: hidden;
+  }
   .anh-vien {
-    position: absolute;
+    position: fixed;
     right: 0;
+    top: 0;
   }
 
   .anh-bia .anh-vien {
@@ -105,10 +125,12 @@ form {
   }
 
   .vien-trong {
-    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     z-index: 2;
     top: 50vh;
-    left: 40vw;
+    left: 30vw;
   }
 
   .vien-trong .row {
@@ -116,14 +138,8 @@ form {
     border: 1px solid;
     border-radius: 40px;
     border-color: #c4c5f1 !important;
-    position: absolute;
     width: 800px;
-    top: 50%; /* Đặt nội dung ở giữa phía trên của ảnh bìa */
-    left: 50%; /* Đặt nội dung ở giữa phía trái của ảnh bìa */
-    transform: translate(
-      -50%,
-      -50%
-    ); /* Di chuyển nội dung lên trên và sang trái để nằm ở giữa */
+    height: auto;
   }
   .anh-y-te {
     width: 364px;
