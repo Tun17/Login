@@ -1,0 +1,86 @@
+img {
+  text-align: center;
+}
+
+.anh-bia-container {
+  position: relative;
+}
+
+.anh-vien {
+  position: absolute;
+  right: 0;
+}
+
+.anh-bia .anh-vien {
+  width: 520px;
+}
+
+.vien-trong {
+  position: absolute;
+  z-index: 2;
+  top: 50vh;
+  left: 40vw;
+}
+
+.vien-trong .row {
+  background-color: white;
+  border: 1px solid;
+  border-radius: 40px;
+  border-color: #c4c5f1 !important;
+  position: absolute;
+  width: 800px;
+  top: 50%; /* Đặt nội dung ở giữa phía trên của ảnh bìa */
+  left: 50%; /* Đặt nội dung ở giữa phía trái của ảnh bìa */
+  transform: translate(
+    -50%,
+    -50%
+  ); /* Di chuyển nội dung lên trên và sang trái để nằm ở giữa */
+}
+.anh-y-te {
+  width: 364px;
+  margin: 20px;
+}
+.anh-may-tinh {
+  width: 342px;
+  margin: 20px;
+}
+.bo-vien {
+  border-radius: 40px;
+}
+form {
+  padding: 20px;
+  margin: 20px;
+}
+.the {
+  padding-left: 20px;
+  color: #dc3545;
+  text-decoration: none;
+}
+.the2 {
+  color: #dc3545;
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+
+@media only screen and (max-width: 700px) {
+  .anh-vien {
+    position: none;
+  }
+  .vien-trong {
+    position: none;
+  }
+  .vien-trong .row {
+    height: 500px;
+    justify-content: center;
+    align-items: center;
+  }
+  .anh-y-te {
+    display: none;
+  }
+  .cot {
+    width: 0;
+  }
+  .anh-may-tinh {
+    display: none;
+  }
+}

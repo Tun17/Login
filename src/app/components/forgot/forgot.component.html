@@ -1,0 +1,67 @@
+<div>
+  <title>Home</title>
+  <div class="anh-bia">
+    <div class="container anh-bia-container">
+      <div class="vien-trong">
+        <div class="row">
+          <div class="col-6">
+            <img
+              src="../../../assets/img/Group 2070.png"
+              alt=""
+              class="anh-y-te"
+            />
+            <form
+              action=""
+              method="POST"
+              [formGroup]="loginF"
+              (submit)="onSubmit()"
+            >
+              <label class="the2">QUÊN MẬT KHẨU</label>
+              <div class="input-group flex-nowrap">
+                <input
+                  type="text"
+                  class="form-control bo-vien"
+                  placeholder="Nhập email"
+                  formControlName="email"
+                  aria-label="Username"
+                  aria-describedby="addon-wrapping"
+                />
+              </div>
+              <div
+                *ngIf="
+                  loginF['controls']['email'].dirty &&
+                  loginF['controls']['email'].errors
+                "
+              >
+                <small *ngIf="loginF['controls']['email'].errors['required']"
+                  >Email không được để trống</small
+                >
+                <small *ngIf="loginF['controls']['email'].errors['email']"
+                  >Nhập đúng định dạng email</small
+                >
+              </div>
+              <br />
+
+              <button
+                type="submit"
+                class="btn btn-danger bo-vien"
+                [disabled]="loginF.invalid"
+              >
+                Gửi email
+              </button>
+              <a routerLink="/login" class="the"> Quay lại</a>
+            </form>
+          </div>
+          <div class="col-6 cot">
+            <img
+              src="../../../assets/img/Group 2059.png"
+              alt=""
+              class="anh-may-tinh"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <img class="anh-vien" src="../../../assets/img/Group 2058.png" alt="" />
+  </div>
+</div>

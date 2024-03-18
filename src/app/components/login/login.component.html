@@ -1,0 +1,105 @@
+<div>
+  <title>Home</title>
+  <div class="anh-bia">
+    <div class="container anh-bia-container">
+      <div class="vien-trong">
+        <div class="row">
+          <div class="col-6">
+            <img
+              src="../../../assets/img/Group 2070.png"
+              alt=""
+              class="anh-y-te"
+            />
+            <form
+              action=""
+              method="POST"
+              [formGroup]="loginF"
+              (submit)="onSubmit()"
+            >
+              <label class="the2">ĐĂNG NHẬP</label>
+              <div class="input-group flex-nowrap">
+                <input
+                  type="text"
+                  class="form-control bo-vien"
+                  placeholder="Tên đăng nhập hoặc email"
+                  formControlName="email"
+                  aria-label="Username"
+                  aria-describedby="addon-wrapping"
+                />
+              </div>
+              <div class="message">
+                <div
+                  *ngIf="
+                    loginF['controls']['email'].dirty &&
+                    loginF['controls']['email'].errors
+                  "
+                >
+                  <div *ngIf="loginF['controls']['email'].errors['required']">
+                    <span>Email không được để trống</span>
+                  </div>
+                  <div
+                    class="message"
+                    *ngIf="loginF['controls']['email'].errors['email']"
+                  >
+                    <span>Nhập đúng định dạng email</span>
+                  </div>
+                </div>
+              </div>
+              <br />
+              <div class="input-group flex-nowrap">
+                <input
+                  type="password"
+                  class="form-control bo-vien"
+                  placeholder="Mật khẩu"
+                  formControlName="password"
+                  aria-label="password"
+                  aria-describedby="addon-wrapping"
+                />
+              </div>
+              <div class="message">
+              <div
+                *ngIf="
+                  loginF['controls']['password'].dirty &&
+                  loginF['controls']['password'].errors
+                "
+                class="message"
+              >
+                <small *ngIf="loginF['controls']['password'].errors['required']"
+                  >Password không được để trống</small
+                >
+              </div>
+              <div *ngIf="mess" message>Mật khẩu hoặc tài khoản không đúng</div>
+            </div>
+              <br />
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckIndeterminate"
+                />
+                <label class="form-check-label" for="flexCheckIndeterminate">
+                  Ghi nhớ mật khẩu
+                </label>
+                <a routerLink="/forgot" class="the"> Quên mật khẩu</a>
+              </div>
+
+              <br />
+              <button type="submit" class="btn btn-danger bo-vien">
+                Đăng nhập
+              </button>
+            </form>
+          </div>
+          <div class="col-6 cot">
+            <img
+              src="../../../assets/img/Group 2059.png"
+              alt=""
+              class="anh-may-tinh"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <img class="anh-vien" src="../../../assets/img/Group 2058.png" alt="" />
+  </div>
+</div>
