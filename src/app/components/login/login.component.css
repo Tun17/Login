@@ -14,7 +14,9 @@ img {
   max-width: unset;
   overflow: hidden;
 }
-
+.anh-bo-y-te {
+  display: none !important;
+}
 .anh-vien {
   position: fixed;
   right: 0;
@@ -56,6 +58,7 @@ img {
 }
 .bo-vien {
   border-radius: 40px;
+  font-family: Inter;
 }
 form {
   padding: 20px;
@@ -80,11 +83,13 @@ form {
 }
 
 @media only screen and (max-width: 700px) {
-  .anh-vien {
-    position: none;
+  .anh-bia-container {
+    display: grid;
   }
   .vien-trong {
-    position: none;
+    height: 500px;
+    border-radius: 0px;
+    display: grid;
   }
   .vien-trong .row {
     height: 500px;
@@ -93,6 +98,19 @@ form {
   }
   .anh-y-te {
     display: none;
+  }
+  .anh-bo-y-te {
+    margin: 30px;
+    display: block !important;
+    color: #3e4095;
+    border: 0 !important;
+    font-style: bold !important;
+  }
+  .bo-y {
+    width: 56px;
+  }
+  .kho-du {
+    width: 178px;
   }
   .cot {
     width: 0;
